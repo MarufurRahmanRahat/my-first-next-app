@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Features from "@/components/Features";
+import Review from "@/components/Review";
 import Stats from "@/components/Stats";
 
 
@@ -9,6 +10,7 @@ export default function Home() {
       <Banner/>
       <Features/>
       <Stats/>
+      <Review/>
      </div>
   );
 }
