@@ -58,7 +58,7 @@ const Navbar = () => {
                                         className="flex items-center space-x-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
                                     >
                                         <div className="w-8 h-8 bg-indigo-400 rounded-full flex items-center justify-center">
-                                            <span><img className="text-sm font-semibold" src={`${user.photoURL}`}></img></span>
+                                            <span><img className="rounded-full w-8 h-8 text-sm font-semibold" src={`${user.photoURL}`}></img></span>
                                         </div>
                                         <span>{`${user.displayName}`}</span>
                                     </button>

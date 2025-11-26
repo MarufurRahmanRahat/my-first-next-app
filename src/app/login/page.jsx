@@ -77,19 +77,19 @@ const LoginPage = () => {
         <>
             <Toaster position="top-center" />
 
-            {/* Login Form */}
+            
             <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full">
                     <div className="bg-white rounded-2xl shadow-xl p-8">
-                        {/* Header */}
+                        
                         <div className="text-center mb-8">
                             <h1 className="text-3xl font-bold text-gray-900 mb-2">Login now!</h1>
                             <p className="text-gray-600">Welcome back to EventHub</p>
                         </div>
 
-                        {/* Form */}
+                        
                         <form onSubmit={handleLogIn} className="space-y-6">
-                            {/* Email Input */}
+                            
                             <div>
                                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                                     Email
@@ -107,7 +107,7 @@ const LoginPage = () => {
                                 />
                             </div>
 
-                            {/* Password Input */}
+                            
                             <div>
                                 <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
                                     Password
@@ -130,7 +130,7 @@ const LoginPage = () => {
                                 </div>
                             </div>
 
-                            {/* Forgot Password Link */}
+                            
                             <div className="text-right">
                                 <Link 
                                     href='/forgot-password'
@@ -140,21 +140,21 @@ const LoginPage = () => {
                                 </Link>
                             </div>
 
-                            {/* Error Message */}
+                            
                             {error && (
                                 <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
                                     {error}
                                 </div>
                             )}
 
-                            {/* Success Message */}
+                            
                             {success && (
                                 <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-sm">
                                     Login successful! Redirecting...
                                 </div>
                             )}
 
-                            {/* Login Button */}
+                           
                             <button 
                                 type="submit" 
                                 disabled={isLoading}
@@ -163,7 +163,7 @@ const LoginPage = () => {
                                 {isLoading ? 'Logging in...' : 'Login'}
                             </button>
 
-                            {/* Divider */}
+                            
                             <div className="relative my-6">
                                 <div className="absolute inset-0 flex items-center">
                                     <div className="w-full border-t border-gray-300"></div>
@@ -173,7 +173,7 @@ const LoginPage = () => {
                                 </div>
                             </div>
 
-                            {/* Google Sign In Button */}
+                            
                             <button 
                                 type="button"
                                 onClick={handleGoogleSignIn} 
@@ -193,11 +193,11 @@ const LoginPage = () => {
                             </button>
                         </form>
 
-                        {/* Sign Up Link */}
+                        
                         <p className="text-center text-gray-600 text-sm mt-6">
                             Don't have an account?{' '}
                             <Link href='/signup' className='text-indigo-600 hover:text-indigo-700 font-semibold transition-colors'>
-                                Sign Up
+                                Register
                             </Link>
                         </p>
                     </div>
