@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EventHub - Event Management Platform
 
-## Getting Started
+A modern event management application built with Next.js 14 (App Router) and Firebase Authentication.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🎫 Browse and search events
+- 🔐 Firebase authentication (Google & Email/Password)
+- 📝 Create and manage events (protected routes)
+- 📱 Fully responsive design
+- 🎨 Modern UI with Tailwind CSS
+- ⚡ Fast and optimized performance
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js 16 (App Router)
+- **Authentication:** Firebase Auth
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React, React Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+### Public Routes
+- `/` - Landing page with 7 sections
+- `/events` - Event listing page with search and filters
+- `/events/[id]` - Event details page
+- `/login` - Login page
+- `/register` - Registration page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Protected Routes (Require Authentication)
+- `/add-event` - Create new event
+- `/manage-events` - Manage all your events
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Features Breakdown
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Landing Page Sections:
+1. **Navbar** - Sticky navigation with login/dropdown
+2. **Hero** - Main banner with CTAs
+3. **Features** - 4 key features with icons
+4. **Upcoming Events** - Event cards grid
+5. **Stats** - Platform statistics
+6. **Testimonials** - User reviews
+7. **Footer** - Links and copyright
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Authentication:
+- Firebase Google Sign-in
+- Email/Password authentication
+- Protected routes with automatic redirect
+- User dropdown with profile info
+
+### Event Management:
+- Create events with rich form
+- Upload images (URL)
+- Categorize events
+- Manage pricing and dates
+- Delete events with confirmation
+
+###  **Package.json Dependencies**
+````json
+{
+  "dependencies": {
+    "next": "16.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "firebase": "^10.7.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8"
+  }
+}
+````
+
+## 🎯 Key Features Implemented:
+
+✅ **7 Landing Page Sections** (Navbar, Banner/Hero, Features, Events, Stats, Testimonials, Footer)
+✅ **Responsive Design** (Mobile, Tablet, Desktop)
+✅ **Firebase Authentication** (Google & Credentials)
+✅ **Protected Routes** (Add Event, Manage Events)
+✅ **Event Listing** with search and filters
+✅ **Event Details** page with full information
+✅ **Form Validation** with loading states
+✅ **Toast Notifications** for user feedback
+✅ **Consistent UI/UX** with hover states
+✅ **Clean, Modern Design** with minimal animations
