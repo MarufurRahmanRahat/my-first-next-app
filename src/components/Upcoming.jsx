@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { eventAPI } from '@/lib/api';
+import Loading from './Loading';
 
 
 
@@ -39,11 +40,9 @@ const Upcoming = () => {
                         Discover amazing events happening near you
                     </p>
 
-                    {loading ? (
-                        <div className="flex justify-center items-center py-12">
-                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
-                        </div>
-                    ) : (
+                    {loading ?
+                    <Loading/>
+                    : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {upcomingEvents.map((event) => (
                                 <div
