@@ -58,6 +58,7 @@ A modern event management application built with Next.js 14 (App Router) and Fir
 - Delete events with confirmation
 
 ###  **Package.json Dependencies**
+`````
  "dependencies": {
     "firebase": "^12.6.0",
     "lucide-react": "^0.554.0",
@@ -67,7 +68,7 @@ A modern event management application built with Next.js 14 (App Router) and Fir
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0"
   },
-
+`````
 ## 🎯 Key Features Implemented:
 
 ✅ **7 Landing Page Sections** (Navbar, Banner/Hero, Features, Events, Stats, Testimonials, Footer)
