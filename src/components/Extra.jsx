@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Extra = () => {
@@ -11,9 +12,9 @@ const Extra = () => {
                     <p className="text-xl mb-8 text-indigo-100">
                         Join thousands of organizers who trust EventHub for their events
                     </p>
-                    <button className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-lg">
+                    <Link href="/add-event"><button className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-lg">
                         Get Started Free
-                    </button>
+                    </button></Link>
                 </div>
             </section>
         </div>

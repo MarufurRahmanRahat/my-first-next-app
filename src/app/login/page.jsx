@@ -22,6 +22,17 @@ const LoginPage = () => {
   
     const { signInUser, signInWithGoogle } = use(AuthContext);
     const notify = () => toast.success('Logged in successfully!');
+ 
+     //auth cookie
+     const setAuthCookie = async (user) => {
+        try {
+            const token = await user.getIdToken();
+            
+            document.cookie = `auth-token=${token}; path=/; max-age=3600; SameSite=Lax`;
+        } catch (error) {
+            console.error('Error setting auth cookie:', error);
+        }
+    };
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -34,7 +45,8 @@ const LoginPage = () => {
         setIsLoading(true);
 
         signInUser(email, password)
-            .then(result => {
+            .then(async result => {
+                 await setAuthCookie(result.user);
                 notify();
                 setSuccess(true);
                 event.target.reset();
@@ -55,7 +67,8 @@ const LoginPage = () => {
         setIsLoading(true);
         
         signInWithGoogle()
-            .then(result => {
+            .then(async result => {
+                await setAuthCookie(result.user);
                 notify();
                 setTimeout(() => {
                     router.push(redirectTo);

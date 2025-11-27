@@ -21,6 +21,16 @@ const RegisterPage = () => {
     const { createUser, signInWithGoogle, updateUser, user, setUser } = use(AuthContext);
     const notify = () => toast.success('Registration successful!');
 
+    //for auth-cookie
+     const setAuthCookie = async (user) => {
+        try {
+            const token = await user.getIdToken();
+            document.cookie = `auth-token=${token}; path=/; max-age=3600; SameSite=Lax`;
+        } catch (error) {
+            console.error('Error setting auth cookie:', error);
+        }
+    };
+
     const handleRegister = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -61,7 +71,8 @@ const RegisterPage = () => {
         setIsLoading(true);
 
         createUser(email, password)
-            .then(result => {
+            .then(async result => {
+                await setAuthCookie(result.user);
                 notify();
                 updateUser({ displayName: name, photoURL: photo })
                     .then(() => {
@@ -91,7 +102,8 @@ const RegisterPage = () => {
         setIsLoading(true);
 
         signInWithGoogle()
-            .then(result => {
+            .then(async result => {
+                await setAuthCookie(result.user);
                 notify();
                 setTimeout(() => {
                     router.push(redirectTo);

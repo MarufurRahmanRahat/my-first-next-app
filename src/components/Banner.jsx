@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Banner = () => {
@@ -11,12 +12,12 @@ const Banner = () => {
             The all-in-one platform for managing events, selling tickets, and engaging attendees
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+            <Link href="/events"><button className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
               Browse Events
-            </button>
-            <button className="px-8 py-4 bg-indigo-700 text-white rounded-lg font-semibold hover:bg-indigo-800 transition-colors border border-indigo-400">
+            </button></Link>
+            <Link href="/add-event"><button className="px-8 py-4 bg-indigo-700 text-white rounded-lg font-semibold hover:bg-indigo-800 transition-colors border border-indigo-400">
               Create Event
-            </button>
+            </button></Link>
           </div>
         </div>
       </section>
