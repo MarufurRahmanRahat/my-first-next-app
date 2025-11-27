@@ -58,22 +58,15 @@ A modern event management application built with Next.js 14 (App Router) and Fir
 - Delete events with confirmation
 
 ###  **Package.json Dependencies**
-````json
-{
-  "dependencies": {
-    "next": "16.0.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "firebase": "^10.7.0",
-    "lucide-react": "^0.263.1"
+ "dependencies": {
+    "firebase": "^12.6.0",
+    "lucide-react": "^0.554.0",
+    "next": "16.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.5.0"
   },
-  "devDependencies": {
-    "tailwindcss": "^3.3.0",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8"
-  }
-}
-````
 
 ## 🎯 Key Features Implemented:
 
