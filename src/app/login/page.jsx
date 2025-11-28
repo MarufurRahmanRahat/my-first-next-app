@@ -30,7 +30,7 @@ const LoginPage = () => {
             
             document.cookie = `auth-token=${token}; path=/; max-age=3600; SameSite=Lax`;
         } catch (error) {
-            console.error('Error setting auth cookie:', error);
+            // console.error('Error setting auth cookie:', error);
         }
     };
 
@@ -55,7 +55,7 @@ const LoginPage = () => {
                 }, 1000);
             })
             .catch(error => {
-                console.log('error happened', error.message)
+                // console.log('error happened', error.message)
                 setError(error.message);
                 setIsLoading(false);
             })
@@ -75,7 +75,7 @@ const LoginPage = () => {
                 }, 1000);
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
                 setError(error.message);
                 setIsLoading(false);
             })

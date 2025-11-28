@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://my-first-next-app-server-zeta.vercel.app/api';
 
 // Generic API call function
 async function apiCall(endpoint, options = {}) {
@@ -19,7 +19,7 @@ async function apiCall(endpoint, options = {}) {
 
     return data;
   } catch (error) {
-    console.error('API Error:', error);
+    // console.error('API Error:', error);
     throw error;
   }
 }

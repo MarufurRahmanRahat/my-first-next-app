@@ -29,7 +29,7 @@ export default function ManageEventsPage() {
             const response = await eventAPI.getUserEvents(user.email);
             setEvents(response.data);
         } catch (error) {
-            console.error('Error fetching events:', error);
+            // console.error('Error fetching events:', error);
         } finally {
             setLoading(false);
         }
@@ -47,7 +47,7 @@ export default function ManageEventsPage() {
             setShowDeleteModal(false);
             setEventToDelete(null);
         } catch (error) {
-            console.error('Error deleting event:', error);
+            // console.error('Error deleting event:', error);
             alert('Failed to delete event');
         }
     };

@@ -71,7 +71,7 @@ export default function AddEventPage() {
       }, 2000);
 
     } catch (error) {
-      console.error('Error creating event:', error);
+    //   console.error('Error creating event:', error);
       alert('Failed to create event. Please try again.');
     } finally {
       setIsLoading(false);

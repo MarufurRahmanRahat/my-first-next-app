@@ -27,7 +27,7 @@ const RegisterPage = () => {
             const token = await user.getIdToken();
             document.cookie = `auth-token=${token}; path=/; max-age=3600; SameSite=Lax`;
         } catch (error) {
-            console.error('Error setting auth cookie:', error);
+            // console.error('Error setting auth cookie:', error);
         }
     };
 
@@ -48,17 +48,17 @@ const RegisterPage = () => {
         setSuccess(false);
 
         if (!passwordPattern.test(password)) {
-            console.log("password didn't match.")
+            // console.log("password didn't match.")
             setError('Password must be at least 6 characters.')
             return;
         }
         else if (!hasUpper.test(password)) {
-            console.log("password didn't match.")
+            // console.log("password didn't match.")
             setError('Password must have an uppercase letter.')
             return;
         }
         else if (!hasLower.test(password)) {
-            console.log("password didn't match.")
+            // console.log("password didn't match.")
             setError('Password must have a lowercase letter.')
             return;
         }
@@ -79,7 +79,7 @@ const RegisterPage = () => {
                         setUser({ ...user, displayName: name, photoURL: photo })
                     })
                     .catch((error) => {
-                        console.log(error);
+                        // console.log(error);
                         setUser(user);
                     })
 
@@ -90,7 +90,7 @@ const RegisterPage = () => {
                 }, 1000);
             })
             .catch(error => {
-                console.log('error happened', error.message)
+                // console.log('error happened', error.message)
                 setError(error.message);
                 setIsLoading(false);
             })
@@ -110,7 +110,7 @@ const RegisterPage = () => {
                 }, 1000);
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
                 setError(error.message);
                 setIsLoading(false);
             })

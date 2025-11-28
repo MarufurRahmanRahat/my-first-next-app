@@ -23,7 +23,7 @@ export default function EventsPage() {
       const response = await eventAPI.getAllEvents(searchTerm, selectedCategory);
       setEvents(response.data);
     } catch (error) {
-      console.error('Error fetching events:', error);
+    //   console.error('Error fetching events:', error);
     } finally {
       setLoading(false);
     }

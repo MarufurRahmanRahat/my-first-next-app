@@ -25,7 +25,7 @@ export default function EventDetailsPage() {
       const response = await eventAPI.getEventById(params.id);
       setEvent(response.data);
     } catch (error) {
-      console.error('Error fetching event:', error);
+    //   console.error('Error fetching event:', error);
       setError('Event not found');
     } finally {
       setLoading(false);

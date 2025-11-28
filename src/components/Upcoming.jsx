@@ -23,7 +23,7 @@ const Upcoming = () => {
             const response = await eventAPI.getUpcomingEvents(4);
             setUpcomingEvents(response.data);
         } catch (error) {
-            console.error('Error fetching events:', error);
+            // console.error('Error fetching events:', error);
         } finally {
             setLoading(false);
         }
